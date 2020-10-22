@@ -46,7 +46,7 @@ hr {
 }
 
 .header ul {
-  font-size: 1.25rem;
+  /* font-size: 1.25rem; */
   font-weight: 300;
   text-transform: lowercase;
 }
@@ -92,7 +92,10 @@ hr {
 
 @media (min-width: 576px) {
   .header .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+  .h1, h1 {
+    font-size: 2.3rem;
   }
 }
 
@@ -101,6 +104,14 @@ hr {
   .footer {
     text-align: center;
   }
+
+  .header .title {
+    font-size: 2rem;
+  }
+  .h1, h1 {
+    font-size: 1.8rem;
+  }
+
 
   .teaser header li {
     display: inline-block;
