@@ -14,7 +14,9 @@
     <link id="dark-theme-style" rel="stylesheet" type="text/css"
           media="(prefers-color-scheme: dark)"
     href="/theme/stylesheet/dark-theme.min.css">
-
+<script>
+  var theArticle = {}
+</script>
 
   <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/fontawesome.css">
   <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/brands.css">
@@ -94,6 +96,12 @@
     </div>
   </aside>
   <main>
+<script>
+  theArticle = {
+    url: '/gratin-de-clementines-a-la-fleur-doranger.html',
+    title: 'Gratin de clémentines à la fleur d'oranger'
+  }
+</script>
 <article class="single">
   <header>
       
@@ -108,6 +116,7 @@
       <a href="/category/dessert.html">Dessert</a>
       <a href="/subcategory/dessert/fruits.html">(Fruits)</a>
       de <a href="/author/gasou.html">Gasou</a> publié le 06 nov. 2020
+      <button class="btn" id="btn-fav"><i class="fas fa-heart"></i></button>
     </p>
   </header>
 
@@ -153,6 +162,11 @@ Temps de cuisson: 10 mn</p>
       À propos ?
     </a>
     <span class="footer-separator">|</span>
+    <a target="_self"
+       href="/pages/favoris.html">
+      Favoris
+    </a>
+    <span class="footer-separator">|</span>
 Généré par <a href="http://getpelican.com" target="_blank" rel="noopener noreferrer">Pelican</a> avec le thème <a href="http://bit.ly/flex-pelican" target="_blank" rel="noopener noreferrer">Flex</a>
   <span class="footer-separator">|</span>
   Passer au thème <a href="javascript:void(0)" onclick="theme.switch(`dark`)">foncé</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">clair</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">navigateur</a>
@@ -163,5 +177,10 @@ Généré par <a href="http://getpelican.com" target="_blank" rel="noopener nore
   </script>
 </p>    </footer>
   </main>
+  <script>
+    const el = document.querySelector("#btn-fav");
+    if (el) { el.addEventListener("click", addFav, false); }
+    addClassForFav();
+  </script>
 </body>
 </html>

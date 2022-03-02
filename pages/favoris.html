@@ -29,27 +29,18 @@
   <link rel="icon" type="image/png" href="/images/profile.png" />
 
 
-<meta name="author" content="Matt" />
-<meta name="description" content="" />
-<meta name="keywords" content="poulet, tajine, abricot">
-
-
+    <meta name="author" content="Matt" />
+    <meta name="description" content="" />
 <meta property="og:site_name" content="Recettes de cuisine par Matt"/>
-<meta property="og:title" content="Tajine de poulet aux abricots"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Recettes de cuisine par Matt"/>
 <meta property="og:description" content=""/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="/tajine-de-poulet-aux-abricots.html"/>
-<meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2021-03-22 17:42:00+01:00"/>
-<meta property="article:modified_time" content="2021-11-07 19:28:18.674836+01:00"/>
-<meta property="article:author" content="/author/matt.html">
-<meta property="article:section" content="Plat"/>
-<meta property="article:tag" content="poulet"/>
-<meta property="article:tag" content="tajine"/>
-<meta property="article:tag" content="abricot"/>
-<meta property="og:image" content="">
+<meta property="og:url" content=""/>
 
-  <title>Tajine de poulet aux abricots| Recettes de cuisine par Matt</title>
+
+
+  <title> &ndash; Favoris| Recettes de cuisine par Matt</title>
 
   <script src="/theme/sticky.js"></script>
 </head>
@@ -98,61 +89,29 @@
     </div>
   </aside>
   <main>
-<script>
-  theArticle = {
-    url: '/tajine-de-poulet-aux-abricots.html',
-    title: 'Tajine de poulet aux abricots'
-  }
-</script>
 <article class="single">
   <header>
-      
-    <h1 id="tajine-de-poulet-aux-abricots">Tajine de poulet aux abricots</h1>
-    <p></p>
-    <p>
-      <a href="/category/plat.html">Plat</a>
-      <a href="/subcategory/plat/viandes.html">(Viandes)</a>
-      de <a href="/author/matt.html">Matt</a> publié le 22 mars 2021
-      <button class="btn" id="btn-fav"><i class="fas fa-heart"></i></button>
-    </p>
+    
+    <h1 id="favoris">Favoris</h1>
   </header>
-
-  <div class="tag-cloud">
-    <p>
-      <a href="/tag/poulet.html">poulet</a>
-      <a href="/tag/tajine.html">tajine</a>
-      <a href="/tag/abricot.html">abricot</a>
-    </p>
-  </div>
-
   <div>
-  </div>
-  <div>
-    <h2>Ingrédients</h2>
-<ul>
-<li>4 blancs de poulet</li>
-<li>2 oignons</li>
-<li>1 courgette</li>
-<li>1 poivron jaune</li>
-<li>1 gousse d'ail hachée</li>
-<li>1 c à s de gingembre frais râpé</li>
-<li>1,5 c à s d'épices à tajine</li>
-<li>1 poignée d'amandes émondées</li>
-<li>65 cl de lait d'amande</li>
-<li>8 abricots secs</li>
-<li>250 g de semoule de couscous (grain moyen)</li>
-<li>un bouquet de coriandre fraîche</li>
-</ul>
-<h2>Préparation</h2>
-<ol>
-<li>Coupez les blancs en cubes, pelez et émincez les oignons, détaillez la courgette en cubes, épépinez le poivron et coupez-le en lamelles.</li>
-<li>Versez 1 cuil. à soupe d'huile dans une cocotte et mettez les cubes de poulet à dorer. Retirez-les de la cocotte et réservez sur une assiette.</li>
-<li>Faites revenir les oignons, l'ail, les lamelles de poivron et la courgette pendant 5 min. Incorporez le gingembre, les épices, du sel et du poivre. Ajoutez le poulet et 35 cl de lait d'amande. Couvrez et laissez mijoter 40 min à feu doux.</li>
-<li>Ajoutez les abricots et les amandes et poursuivez la cuisson encore 15 min.</li>
-<li>Pendant ce temps, préparez le couscous. Portez à ébullition le lait d'amande restant, du sel, du poivre et 1 cuil. à café d'huile. Retirez le mélange du feu, puis versez sur la semoule. Couvrez et laissez gonfler en séparant les grains à la fourchette.</li>
-<li>Servez le tajine parsemé de coriandre fraîche accompagné de la semoule à l'amande.</li>
-</ol>
-  </div>
+<p>Retrouver ici toutes vos recettes préférées.</p>
+<div id="fav"></div>
+
+<p>Pour ajouter / enlever un favori, cliquer sur le ♥ à côté du titre de la recette.</p>
+<script>
+    const favs = localStorage.getItem('my-favs');
+    if (favs) {
+        const favArray = JSON.parse(favs);
+        let html = '<div><ul class="list">';
+        for (let fav of favArray) {
+            html += '<li><a href="' + fav.url + '">'  + fav.title + '</a></li>';
+        }
+        html += '</ul></div>'
+        const el = document.getElementById('fav');
+        el.innerHTML = html;
+    }
+</script>  </div>
 </article>
     <footer>
       <nav>

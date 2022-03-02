@@ -14,7 +14,9 @@
     <link id="dark-theme-style" rel="stylesheet" type="text/css"
           media="(prefers-color-scheme: dark)"
     href="/theme/stylesheet/dark-theme.min.css">
-
+<script>
+  var theArticle = {}
+</script>
 
   <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/fontawesome.css">
   <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/brands.css">
@@ -94,6 +96,12 @@
     </div>
   </aside>
   <main>
+<script>
+  theArticle = {
+    url: '/super-moelleux-au-chocolat.html',
+    title: 'Super moelleux au chocolat'
+  }
+</script>
 <article class="single">
   <header>
       
@@ -102,6 +110,7 @@
       <a href="/category/dessert.html">Dessert</a>
       <a href="/subcategory/dessert/gateaux.html">(Gateaux)</a>
       de <a href="/author/matt.html">Matt</a> publié le 26 oct. 2020
+      <button class="btn" id="btn-fav"><i class="fas fa-heart"></i></button>
     </p>
   </header>
 
@@ -150,6 +159,11 @@ Cuisson 25 minutes</p>
       À propos ?
     </a>
     <span class="footer-separator">|</span>
+    <a target="_self"
+       href="/pages/favoris.html">
+      Favoris
+    </a>
+    <span class="footer-separator">|</span>
 Généré par <a href="http://getpelican.com" target="_blank" rel="noopener noreferrer">Pelican</a> avec le thème <a href="http://bit.ly/flex-pelican" target="_blank" rel="noopener noreferrer">Flex</a>
   <span class="footer-separator">|</span>
   Passer au thème <a href="javascript:void(0)" onclick="theme.switch(`dark`)">foncé</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">clair</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">navigateur</a>
@@ -160,5 +174,10 @@ Généré par <a href="http://getpelican.com" target="_blank" rel="noopener nore
   </script>
 </p>    </footer>
   </main>
+  <script>
+    const el = document.querySelector("#btn-fav");
+    if (el) { el.addEventListener("click", addFav, false); }
+    addClassForFav();
+  </script>
 </body>
 </html>
