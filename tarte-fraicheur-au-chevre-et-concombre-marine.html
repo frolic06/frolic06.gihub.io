@@ -15,8 +15,15 @@
           media="(prefers-color-scheme: dark)"
     href="/theme/stylesheet/dark-theme.min.css">
 <script>
-  var theArticle = {}
+  var theArticle = {};
 </script>
+<script>
+  var recettes = [];
+  var search_index = {};
+</script>
+    <link rel="stylesheet" href="/theme/simplesearch.min.css" />
+    <script src="/theme/simplesearch.min.js"></script>
+    <script src="/theme/search.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/fontawesome.css">
   <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/brands.css">
@@ -61,6 +68,10 @@
       <h1><a href="/">Recettes de cuisine par Matt</a></h1>
 <p>Mes recettes préférées à portée de main</p>
 
+          <div class="autocomplete" > <!-- style="width:300px;" -->
+            <i class="fa fa-search icon"></i>
+            <input id="simple_search_input" type="search" name="query" placeholder="Recherche...">
+          </div>
       <nav id="navbar">
         <ul class="list">
           <li>
@@ -157,7 +168,7 @@
 </ol>
   </div>
   <div class="related-posts">
-    Recettes similaires:
+    <p>Recettes similaires:</p>
     <ul class="related-posts">
       <li><a href="/ravioles-depeautre-au-chevre-frais-et-olives.html">Ravioles d’épeautre au chèvre frais et olives</a></li>
       <li><a href="/frittata-a-la-patate-douce-et-au-chevre-frais.html">Frittata à la patate douce et au chèvre frais</a></li>
@@ -201,6 +212,9 @@ Généré par <a href="http://getpelican.com" target="_blank" rel="noopener nore
     const el = document.querySelector("#btn-fav");
     if (el) { el.addEventListener("click", addFav, false); }
     addClassForFav();
+  </script>
+  <script>
+    autocomplete(document.getElementById("simple_search_input"), search_index, recettes);
   </script>
 </body>
 </html>
