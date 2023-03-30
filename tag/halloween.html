@@ -5,12 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
-
+  <meta name="robots" content="index, follow" />
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
-
     <link id="dark-theme-style" rel="stylesheet" type="text/css"
           media="(prefers-color-scheme: dark)"
     href="/theme/stylesheet/dark-theme.min.css">
@@ -21,21 +18,14 @@
   var recettes = [];
   var search_index = {};
 </script>
-    <link rel="stylesheet" href="/theme/simplesearch.min.css" />
-    <script src="/theme/simplesearch.min.js"></script>
-    <script src="/theme/search.min.js"></script>
-
+  <link rel="stylesheet" href="/theme/simplesearch.min.css" />
+  <script src="/theme/simplesearch.min.js"></script>
+  <script src="/theme/search.min.js"></script>
   <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/fontawesome.css">
   <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/brands.css">
   <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/solid.css">
-
-    <link href="/theme/theme.css" rel="stylesheet">
-
-
-
+  <link href="/theme/theme.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="/images/profile.png" />
-
-
     <meta name="author" content="Matt" />
     <meta name="description" content="" />
 <meta property="og:site_name" content="Recettes de cuisine par Matt"/>
@@ -44,9 +34,7 @@
 <meta property="og:description" content=""/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content=""/>
-
   <title> #halloween| Recettes de cuisine par Matt</title>
-
   <script src="/theme/sticky.js"></script>
 </head>
 <body >
@@ -56,46 +44,22 @@
         <img src="/images/profile.png" alt="Recettes de cuisine par Matt" title="Recettes de cuisine par Matt">
       </a>
       <h1><a href="/">Recettes de cuisine par Matt</a></h1>
-<p>Mes recettes préférées à portée de main</p>
-
-          <div class="autocomplete" > <!-- style="width:300px;" -->
+<p>Mes recettes préférées à portée de main</p>          <div class="autocomplete" > <!-- style="width:300px;" -->
             <i class="fa fa-search icon"></i>
             <input id="simple_search_input" type="search" name="query" placeholder="Recherche...">
           </div>
       <nav id="navbar">
         <ul class="list">
-          <li>
-            <a href="/"><i class="fas fa-home"></i> Home </a>
-          </li>
-          <li>
-            <a href="/category/apero.html"><i class="fas fa-glass-cheers"></i> Apéros</a>
-          </li>
-          <li>
-            <a href="/category/dessert.html"><i class="fas fa-birthday-cake"></i> Desserts</a>
-          </li>
-          <li>
-            <a href="/category/pain.html"><i class="fas fa-bread-slice"></i> Pains</a>
-          </li>
-          <li>
-            <a href="/category/plat.html"><i class="fas fa-fish"></i> Plats</a>
-          </li>
-          <li>
-            <a href="/category/soupe.html"><i class="fas fa-carrot"></i> Soupes</a>
-          </li>
-          <li>
-            <a href="/authors.html"><i class="fas fa-user"></i> Auteurs </a>
-          </li>
-          <li>
-            <a href="/archives.html"><i class="fas fa-clock"></i> Archives</a>
-          </li>
-          <li>
-            <a href="/tags.html"><i class="fas fa-tag"></i> Labels </a>
-          </li>
-          <li>
-            <a href="/pages/favoris.html"><i class="fas fa-heart"></i> Favoris </a>
-          </li>
-          
-
+          <li><a href="/"><i class="fas fa-home"></i> Home </a></li>
+          <li><a href="/category/apero.html"><i class="fas fa-glass-cheers"></i> Apéros</a></li>
+          <li><a href="/category/dessert.html"><i class="fas fa-birthday-cake"></i> Desserts</a></li>
+          <li><a href="/category/pain.html"><i class="fas fa-bread-slice"></i> Pains</a></li>
+          <li><a href="/category/plat.html"><i class="fas fa-fish"></i> Plats</a></li>
+          <li><a href="/category/soupe.html"><i class="fas fa-carrot"></i> Soupes</a></li>
+          <li><a href="/authors.html"><i class="fas fa-user"></i> Auteurs </a></li>
+          <li><a href="/archives.html"><i class="fas fa-clock"></i> Archives</a></li>
+          <li><a href="/tags.html"><i class="fas fa-tag"></i> Labels </a></li>
+          <li><a href="/pages/favoris.html"><i class="fas fa-heart"></i> Favoris </a></li>
         </ul>
       </nav>
     </div>
@@ -134,7 +98,6 @@
     <footer>
       <nav>
         <a href="/">Home</a>
-  
         <a href="/authors.html">Auteurs</a>
         <a href="/archives.html">Archives</a>
         <a href="/categories.html">Catégories</a>
@@ -166,8 +129,6 @@ Généré par <a href="http://getpelican.com" target="_blank" rel="noopener nore
     if (el) { el.addEventListener("click", addFav, false); }
     addClassForFav();
   </script>
-  <script>
-    autocomplete(document.getElementById("simple_search_input"), search_index, recettes);
-  </script>
+  <script>autocomplete(document.getElementById("simple_search_input"), search_index, recettes);</script>
 </body>
 </html>
